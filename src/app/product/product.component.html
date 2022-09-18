@@ -1,0 +1,26 @@
+<div class="m-3">
+    <h3 *ngIf="product" else="noProduct">{{title}}</h3>
+    <ng-template #noProduct>Bu kategoride ürün yoktur!</ng-template>
+</div>
+
+<div class="form-group">
+    <div class="mb-3">
+        <input type="text" class="form-control" placeholder="Film ara" [(ngModel)]="filterText">
+    </div>
+    <div *ngIf="filterText" class="form-text" style="color: #fff;">
+        Şu an <strong>{{filterText}} aradınız</strong>
+    </div>
+</div>
+
+<div class="row">
+    <div *ngFor="let product of product | productFilter:filterText" class="card" style="width: 16rem;">
+        <img [src]="product.imgUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title backgroundColor">
+                {{product.name}}
+            </h5>
+            <button type="button" class="btn btn-outline-secondary">{{product.description}}</button>
+          
+        </div>
+    </div>
+</div>

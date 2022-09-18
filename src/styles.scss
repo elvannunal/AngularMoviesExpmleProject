@@ -1,1 +1,34 @@
-/* You can add global styles to this file, and also import other style files */
+.list-group-item.active {
+    z-index: 2;
+    color: #fff;
+    background-color: #272b30;
+    border-color: #343a40;
+    border:none;
+  }
+  [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled), button:not(:disabled) {
+    cursor: pointer;
+    border-bottom-width: 6px;
+    width: 217px;
+    border-right: none;
+    border-left-width: medium;
+}
+.row{
+    background-color: rgba(0, 0, 0, 0.952);
+}
+.list-group{
+  background-color: rgba(0, 0, 0, 0.952);
+}
+.list-group-item:last-child {
+  margin-top: 10px;
+}
+
+.list-group-item:first-child {
+  border-top-left-radius: 0;
+}
+.card{
+  margin-right: 20px;
+  margin-bottom:10px;
+}
+.h3, h3 {
+  color: #e0e0e0 !important;
+}
